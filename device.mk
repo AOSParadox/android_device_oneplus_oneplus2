@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.par.branch=LA.BF64.1.2.2-06140-8x94.0
 
+# Dalvik/HWUI
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
